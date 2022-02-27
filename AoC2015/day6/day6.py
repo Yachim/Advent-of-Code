@@ -15,7 +15,7 @@ def part1():
                     lights[j][k] = True
                 elif i[0] == "off":
                     lights[j][k] = False
-    return sum([sum(i) for i in lights])
+    return sum(sum(i) for i in lights)
 
 def part2():
     lights = [[0 for i in range(1000)] for j in range(1000)]

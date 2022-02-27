@@ -1,5 +1,4 @@
 from itertools import permutations
-from math import perm
 
 distances = {}
 input = open("input.txt", "r").read().splitlines()

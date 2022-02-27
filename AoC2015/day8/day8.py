@@ -1,6 +1,5 @@
 input = open("input.txt", "r").read().splitlines()
 
-
 def part1():
     return sum(len(i)-len(eval(i)) for i in input)
 
