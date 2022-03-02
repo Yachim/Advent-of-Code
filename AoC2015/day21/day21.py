@@ -52,9 +52,9 @@ def eval_fight(plr):
     plr_true_dmg = plr[1] - input["Armor"]
     boss_true_dmg = input["Damage"] - plr[2]
     if plr_true_dmg == 0:
-        return False
+        plr_true_dmg = 1
     if boss_true_dmg == 0:
-        return True
+        boss_true_dmg = 1
     plr_hits_needed = int(ceil(input["Hit Points"] / plr_true_dmg)) # number of hits the player needs to defeat the boss
     boss_hits_needed = int(ceil(plr[0] / boss_true_dmg)) # number of hits the boss needs to defeat the player 
     if plr_hits_needed <= boss_hits_needed:
