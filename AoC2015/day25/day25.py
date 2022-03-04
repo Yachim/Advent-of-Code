@@ -1,27 +1,21 @@
+from msilib import sequence
 import re
 
 row, col = (int(i) for i in re.findall(r"^[\w ,.]+ (\d+),[\w ,]+ (\d+).$", open("input.txt", "r").read())[0])
 row = 6
-col = 1
+col = 6
 a = col + row - 2 # side of the previous full triangle
 triangle = a * (a+1) / 2 # area of the previous full triangle
 target_index = int(triangle + col)
-
-
-# část odsud nefunguje
 base = 20151125
 factor = 252533
 div = 33554393
-val = (base * factor) % div
-base_i = 1
-while val != base:
-    base_i += 1
-    val = (val * factor) % div
+seq = [base, base * factor % div]
+while seq[-1] != base:
+    seq.append(seq[-1] * factor % div)
+seq.pop()
 
 def part1():
-    val = base
-    for i in range(target_index % base_i):
-        val = (val * factor) % div
-    return val
+    return seq[target_index % len(seq)]
 
 print(part1())
