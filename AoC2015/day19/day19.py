@@ -55,20 +55,21 @@ def part2(m=input[1], steps=0):
     print()
 """
 def part2():
-    graph = [input[1]]
+    graph = [[input[1]]]
     i = 0
     while True:
         graph.append([])
-        mol = graph[i]
-        for j in reverse_replacements:
-            for k in re.finditer(j, mol):
-                new_str = mol[k.start():] + reverse_replacements[j] + mol[:k.end()]
-                if new_str == "e":
-                    return i + 1
-                if "e" in new_str and len(new_str) > 1:
-                    continue
-                graph[i+1].append(new_str)
-        i + 1
+        mols = graph[i]
+        for l in mols:
+            for j in reverse_replacements:
+                for k in re.finditer(j, l):
+                    new_str = l[k.start():] + reverse_replacements[j] + l[:k.end()]
+                    if new_str == "e":
+                        return i + 1
+                    if "e" in new_str and len(new_str) > 1:
+                        continue
+                    graph[i+1].append(new_str)
+            i += 1
 
 print(part1())
 print(part2())
