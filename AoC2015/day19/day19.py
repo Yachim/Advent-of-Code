@@ -69,7 +69,7 @@ def part2():
                     if "e" in new_str and len(new_str) > 1:
                         continue
                     graph[i+1].append(new_str)
-            i += 1
+        i += 1
 
 print(part1())
 print(part2())
