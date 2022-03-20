@@ -1,6 +1,6 @@
 # Things I've learned
 List of all the things I've learned while solving this year
-## Python specific
+## Python-specific
 Specific to the python programing language, like functions and libraries.
 ### map(func, iterable)
 Returns map object. Applies function `func` to all elements of the iterable.
@@ -35,10 +35,10 @@ Returns the n most common items.
 ```
 
 ### itertools.combinations(iter, n)
-Returns combinations of iterable `iter`. Each combinations has a length of n (defaul is length of iterable).
+Returns combinations of iterable `iter`. Each combination has a length of n (default is the length of the iterable).
 
 ### itertools.permutations(iter, n)
-Returns permutations of iterable `iter`. Each combinations has a length of n (defaul is length of iterable).
+Returns permutations of iterable `iter`. Each permutation has a length of n (default is the length of the iterable).
 
 ### The difference between list, tuple and set
  - list:
@@ -57,7 +57,7 @@ Returns permutations of iterable `iter`. Each combinations has a length of n (de
    - ❌ doesn't support indexing or slicing
    - ❌ doesn't allow duplicate elements
 #### frozenset
-Immutable version of set. Can be an element of a set (normal set can't).
+An immutable version of a set. Can be an element of a set (a normal set can't).
 
 ### set(a) ^ set(b)
 Returns symmetric difference from sets a and b.
@@ -84,8 +84,12 @@ Applies the function `func` from left to right on all elements, reducing it to o
 
 ## General
 Not specific to any programming language, like algorithms.
-### Game of life optimalization
-Suppose we have this 3x3 table for game of life:
+### The difference between combination and permutation
+Combinations are a way of selecting different elements from a list. Permutations are a way of selecting **and ordering** different elements from a list.
+For example: `(1, 2)` and `(2, 1)` are the same combinations but different permutations.
+
+### Game of life optimization
+Suppose we have this 3x3 table for Conway's Game of Life:
 | | | |
 |---|---|---|
 |1|2|3|
@@ -108,9 +112,9 @@ We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) 
 #### DFS
 Searches child nodes. When no other child nodes are present it goes back.
 #### BFS
-Searches neigboring nodes. When all neigboring nodes are searched it searches all neighboring child nodes.
+Searches neighboring nodes. When all neighboring nodes are searched it searches all neighboring child nodes.
 #### Dijkstra's algorithm
 Selects the child node with the smallest distance from the start. The first found is the shortest distance.
 #### A*
-Selects the child node with the smallest sum of distance from the start and heuristic function. The first found is the shortest distance.
-The heuristic function returns approximate distance to the end node. It can't overestimate the distance (the real distance has always have to be the same or higher). One example of heuristic function could be beeline.
+Selects the child node with the smallest sum of the distance from the start and heuristic function. The first found is the shortest distance.
+The heuristic function returns the approximate distance to the end node. It can't overestimate the distance (the real distance always has to be the same or higher). One example of a heuristic function could be a beeline.
