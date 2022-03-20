@@ -86,12 +86,14 @@ Applies the function `func` from left to right on all elements, reducing it to o
 Not specific to any programming language, like algorithms.
 ### Game of life optimalization
 Suppose we have this 3x3 table for game of life:
+|---|---|---|
 |1|2|3|
 |4|5|6|
 |7|8|9|
 
 When checking for neighbors, we have to check if it is an edge (or a corner) element, so we don't get an index out of range.
 To avoid these checks a table like this can be used:
+|---|---|---|---|---|
 |a|b|c|d|e|
 |p|1|2|3|f|
 |o|4|5|6|g|
