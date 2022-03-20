@@ -2,8 +2,8 @@
 List of all the things I've learned while solving this year
 ## Python specific
 Specific to the python programing language, like functions and libraries.
-### map(func, *iterables)
-Returns map object. Applies function `func` to all elements of iterables.
+### map(func, *iterable)
+Returns map object. Applies function `func` to all elements of iterable.
 ```python
 >>> list(map(int, ["1", "2", "3"]))
 [1,2,3]
@@ -106,6 +106,11 @@ We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) 
 
 ### Graph algorithms
 #### DFS
+Searches child nodes. When no other child nodes are present it goes back.
 #### BFS
+Searches neigboring nodes. When all neigboring nodes are searched it searches all neighboring child nodes.
 #### Dijkstra's algorithm
+Selects the child node with the smallest distance from the start. The first found is the shortest distance.
 #### A*
+Selects the child node with the smallest sum of distance from the start and heuristic function. The first found is the shortest distance.
+The heuristic function returns approximate distance to the end node. It can't overestimate the distance (the real distance has always have to be the same or higher). One example of heuristic function could be beeline.
