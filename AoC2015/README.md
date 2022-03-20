@@ -42,6 +42,7 @@ Returns permutations of iterable `iter`. Each combinations has a length of n (de
 
 ### The difference between list, tuple and set
  - list:
+<<<<<<< HEAD
    - ✔️ is mutable 
    - ✔️ is ordered
    - ✔️ supports indexing or slicing
@@ -56,6 +57,22 @@ Returns permutations of iterable `iter`. Each combinations has a length of n (de
    - ❌ is not ordered
    - ❌ doesn't support indexing or slicing
    - ❌ doesn't allow duplicate elements
+=======
+&emsp;✔️ is mutable 
+&emsp;✔️ is ordered
+&emsp;✔️ supports indexing or slicing
+&emsp;✔️ allows duplicate elements
+ - tuple:
+&emsp;❌ is immutable
+&emsp;✔️ is ordered
+&emsp;✔️ supports indexing or slicing
+&emsp;✔️ allows duplicate elements
+ - set:
+&emsp;✔️ is mutable
+&emsp;❌ is not ordered
+&emsp;❌ doesn't support indexing or slicing
+&emsp;❌ doesn't allow duplicate elements
+>>>>>>> 61b834b3bb21e755f089fecac13a5f0153bcdaa5
 #### frozenset
 Immutable version of set. Can be an element of a set (normal set can't).
 
