@@ -90,7 +90,6 @@ Suppose we have this 3x3 table for game of life:
 |1|2|3|
 |4|5|6|
 |7|8|9|
-|---|---|---|
 When checking for neighbors, we have to check if it is an edge (or a corner) element, so we don't get an index out of range.
 To avoid these checks a table like this can be used:
 |---|---|---|---|---|
@@ -99,7 +98,6 @@ To avoid these checks a table like this can be used:
 |o|4|5|6|g|
 |n|7|8|9|h|
 |m|l|k|j|i|
-|---|---|---|---|---|
 We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) and we only use them for checks.
 
 ### Graph algorithms
