@@ -2,8 +2,8 @@
 List of all the things I've learned while solving this year
 ## Python specific
 Specific to the python programing language, like functions and libraries.
-### map(func, *iterable)
-Returns map object. Applies function `func` to all elements of iterable.
+### map(func, iterable)
+Returns map object. Applies function `func` to all elements of the iterable.
 ```python
 >>> list(map(int, ["1", "2", "3"]))
 [1,2,3]
