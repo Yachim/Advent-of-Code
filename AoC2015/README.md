@@ -42,7 +42,6 @@ Returns permutations of iterable `iter`. Each combinations has a length of n (de
 
 ### The difference between list, tuple and set
  - list:
-<<<<<<< HEAD
    - ✔️ is mutable 
    - ✔️ is ordered
    - ✔️ supports indexing or slicing
@@ -57,25 +56,50 @@ Returns permutations of iterable `iter`. Each combinations has a length of n (de
    - ❌ is not ordered
    - ❌ doesn't support indexing or slicing
    - ❌ doesn't allow duplicate elements
-=======
-&emsp;✔️ is mutable 
-&emsp;✔️ is ordered
-&emsp;✔️ supports indexing or slicing
-&emsp;✔️ allows duplicate elements
- - tuple:
-&emsp;❌ is immutable
-&emsp;✔️ is ordered
-&emsp;✔️ supports indexing or slicing
-&emsp;✔️ allows duplicate elements
- - set:
-&emsp;✔️ is mutable
-&emsp;❌ is not ordered
-&emsp;❌ doesn't support indexing or slicing
-&emsp;❌ doesn't allow duplicate elements
->>>>>>> 61b834b3bb21e755f089fecac13a5f0153bcdaa5
 #### frozenset
 Immutable version of set. Can be an element of a set (normal set can't).
+
+### set(a) ^ set(b)
+Returns symmetric difference from sets a and b.
+```python
+>>> a = set([1,2,3])
+>>> b = set([2,3,4])
+>>> a ^ b
+{1, 4}
+```
+
+### operator library 
+Contains functions working as operatos, for example `operator.add(x, y)` is the same as `x + y`.
+```python
+>>> operator.add(1,2)
+3
+```
+
+### functools.reduce(func, iter)
+Applies the function `func` from left to right on all elements, reducing it to one value. Functions from the operator library can be passed. 
+```python
+>>> reduce(operator.mul, [1,2,3,4,5])
+120
+```
 
 ## General
 Not specific to any programming language, like algorithms.
 ### Game of life optimalization
+Suppose we have this 3x3 table for game of life:
+|1|2|3|
+|4|5|6|
+|7|8|9|
+When checking for neighbors, we have to check if it is an edge (or a corner) element, so we don't get an index out of range.
+To avoid these checks a table like this can be used:
+|a|b|c|d|e|
+|p|1|2|3|f|
+|o|4|5|6|g|
+|n|7|8|9|h|
+|m|l|k|j|i|
+We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) and we only use them for checks.
+
+### Graph algorithms
+#### DFS
+#### BFS
+#### Dijkstra's algorithm
+#### A*
