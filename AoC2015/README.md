@@ -96,11 +96,11 @@ When checking for neighbors, we have to check if it is an edge (or a corner) ele
 To avoid these checks a table like this can be used:
 | | | | | |
 |---|---|---|---|---|
-|*a|b|c|d|e*|
+|*a*|*b*|*c*|*d*|*e*|
 |*p*|1|2|3|*f*|
 |*o*|4|5|6|*g*|
 |*n*|7|8|9|*h*|
-|*m|l|k|j|i*|
+|*m*|*l*|*k*|*j*|*i*|
 
 We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) and we only use them for checks.
 
