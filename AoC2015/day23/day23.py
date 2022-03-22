@@ -1,4 +1,3 @@
-
 input = [i.split() for i in open("input.txt", "r").read().splitlines()]
 IS = {"hlf": lambda x: x//2,
       "tpl": lambda x: 3*x,

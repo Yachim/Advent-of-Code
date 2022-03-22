@@ -6,7 +6,6 @@ def part1():
     return up-down
 
 def part2():
-    not_done = True
     floor = 0
     for i in range(len(input)):
         floor += {"(": 1, ")": -1}[input[i]]

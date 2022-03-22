@@ -1,14 +1,12 @@
-from itertools import permutations
-
 input = list(map(int, open("input.txt", "r").read().splitlines()))
 
-def part1(subset=[], remaining=input): # vraci none
+def solve(subset=[], remaining=input): # vraci none a 2. část nejspíš nemá fungovat
     if sum(subset) > 150:
         return
     elif sum(subset) == 150:
         yield subset
     for i, j in enumerate(remaining):
-        yield from part1(subset+[j], remaining[i+1:])
+        yield from solve(subset+[j], remaining[i+1:])
        
-print(print(len(list(part1()))))
-print(print(len(min(list(part1()), key=lambda x: len(x)))))
+print(len(list(solve())))
+print(len(min(list(solve()), key=lambda x: len(x))))
