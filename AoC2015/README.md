@@ -118,6 +118,3 @@ Selects the child node with the smallest distance from the start. The first foun
 #### A*
 Selects the child node with the smallest sum of the distance from the start and heuristic function. The first found is the shortest distance.
 The heuristic function returns the approximate distance to the end node. It can't overestimate the distance (the real distance always has to be the same or higher). One example of a heuristic function could be a beeline.
-
-### Memoization
-Just a reminder for me to remember to use it. Use some dictionary acting like a cache.
