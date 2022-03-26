@@ -112,7 +112,7 @@ We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) 
 #### DFS
 Searches child nodes. When no other child nodes are present it goes back.
 #### BFS
-Searches neighboring nodes. When all neighboring nodes are searched it searches all neighboring child nodes.
+Searches neighboring nodes. When all neighboring nodes are searched it searches all neighboring nodes in the next layer.
 #### Dijkstra's algorithm
 Selects the child node with the smallest distance from the start. The first found is the shortest distance.
 #### A*
