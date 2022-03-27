@@ -6,13 +6,13 @@ RE_BOTS = r"bot (\d+) gives low to (bot|output) (\d+) and high to (bot|output) (
 
 input = open("input.txt", "r").read()
 
-bots = {"bot" + str(i.group(2)):[] for i in re.finditer(RE_VALUES, input)} # bots and outputs
+bots = {f"bot{str(i.group(2))}":[] for i in re.finditer(RE_VALUES, input)} # bots and outputs
 for i in re.finditer(RE_VALUES, input):
-    bots["bot" + str(i.group(2))].append(int(i.group(1)))
+    bots[f"bot{str(i.group(2))}"].append(int(i.group(1)))
 
 bot_instructions = {}
 for i in re.finditer(RE_BOTS, input):
-    bot_instructions["bot" + str(i.group(1))] = (i.group(2), i.group(3), i.group(4), i.group(5))
+    bot_instructions[f"bot{str(i.group(2))}"] = (i.group(2), i.group(3), i.group(4), i.group(5))
 
 def solve(part2=False):
     bots_ = deepcopy(bots)
