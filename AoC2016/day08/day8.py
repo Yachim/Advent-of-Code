@@ -3,8 +3,8 @@ import re
 
 input = open("input.txt", "r").read().splitlines()
 
-RE1 = "(?:rect) (?:(\d+)x(\d+))"
-RE2 = "(?:rotate (?:row|column)) (x|y)=(\d+) by (\d+)"
+RE1 = r"(?:rect) (?:(\d+)x(\d+))"
+RE2 = r"(?:rotate (?:row|column)) (x|y)=(\d+) by (\d+)"
 
 def solve(h, w, part2=False):
     grid = np.zeros((h, w))
