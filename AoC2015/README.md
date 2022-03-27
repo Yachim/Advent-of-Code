@@ -112,12 +112,9 @@ We can then use 1-9 as our playing area. Cells a-p always remain 0 (turned off) 
 #### DFS
 Searches child nodes. When no other child nodes are present it goes back.
 #### BFS
-Searches neighboring nodes. When all neighboring nodes are searched it searches all neighboring child nodes.
+Searches neighboring nodes. When all neighboring nodes are searched it searches all neighboring nodes in the next layer.
 #### Dijkstra's algorithm
 Selects the child node with the smallest distance from the start. The first found is the shortest distance.
 #### A*
 Selects the child node with the smallest sum of the distance from the start and heuristic function. The first found is the shortest distance.
 The heuristic function returns the approximate distance to the end node. It can't overestimate the distance (the real distance always has to be the same or higher). One example of a heuristic function could be a beeline.
-
-### Memoization
-Just a reminder for me to remember to use it. Use some dictionary acting like a cache.
