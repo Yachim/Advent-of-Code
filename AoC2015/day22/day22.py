@@ -11,7 +11,7 @@ spell_list = ("m", "d", "s", "p", "r")
 
 def solve(part2=False): 
     nodes = {(*plr_stats, *input, 0, 0, 0, 0): (0, "")} # {(0: plr_hp, 1: plr_armor, 2: plr_mana, 3: boss_hp, 4: boss_dmg, 5: timer_shield, 6: timer_poison, 7: timer_recharge, 8: spell_count): (0: mana_spent, 1: last_spell)}
-    while nodes:
+    while True:
         node_data = min(nodes, key=lambda x: nodes[x][0]) #hp, damage, armor, timers
         node_stats = nodes.pop(node_data) # mana_spent, spells
         node_data = list(node_data)
