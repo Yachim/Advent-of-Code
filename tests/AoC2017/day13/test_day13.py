@@ -5,6 +5,8 @@ from src.AoC2017.day13.day13 import *
 
 PATH = str(Path(__file__).parent.resolve())
 
+
+
 class TestInputProcessing(unittest.TestCase):
     def test_input_processing(self):
         with open(PATH + "/test_input.txt", "r") as f:
