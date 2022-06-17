@@ -1,1 +1,2 @@
-.vscode
+#.vscode - I'm the only one working on this
+__pycache__

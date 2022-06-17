@@ -1,7 +1,5 @@
 from math import sqrt
 
-from numpy import half, number
-
 
 def part1(input):
     side = int(sqrt(input)) # size of the closest full side
