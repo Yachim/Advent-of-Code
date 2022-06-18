@@ -59,4 +59,5 @@ array([[ 3,  1,  2],
 
 ## General
 Not specific to any programming language, like algorithms.
-### 
+### Josephus problem
+Learned from [this Numberphile](https://www.youtube.com/watch?v=uCsD3ZGzMgE&ab_channel=Numberphile) video.
