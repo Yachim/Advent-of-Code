@@ -47,7 +47,7 @@ def part1(list_len: int, lengths: Tuple[int]):
 
     return l[0] * l[1]
 
-def part2(list_len: int, lengths: Tuple[int]):
+def part2(list_len: int, lengths: str) -> str:
     l = np.arange(list_len)
     index = 0
     skip = 0
