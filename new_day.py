@@ -45,3 +45,6 @@ if __name__ == "__main__":
     if folder_empty(f"{year}/{day}"):
         create_files(f"src/{year}/{day}", day)
         create_files(f"tests/{year}/{day}", day, "test_")
+
+        with open(f"tests/{year}/{day}/test_{day}.py", "w") as f:
+            f.write(f"import unittest\n\nfrom src.{year}.{day}.{day} import *")
