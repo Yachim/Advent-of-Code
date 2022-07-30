@@ -27,6 +27,7 @@ def create_folder(path: str):
     f.close()
 
 def create_files(path: str, day: str, name_pref=""):
+    f = open(f"{path}/__init__.py", "x")
     f = open(f"{path}/{name_pref}{day}.py", "x")
     f = open(f"{path}/{name_pref}input.txt", "x")
     f.close()
@@ -48,3 +49,13 @@ if __name__ == "__main__":
 
         with open(f"tests/{year}/{day}/test_{day}.py", "w") as f:
             f.write(f"import unittest\n\nfrom src.{year}.{day}.{day} import *")
+
+        with open(f"src/{year}/{day}/{day}.py", "w") as f:
+            f.write('''
+
+if __name__ == "__main__":
+    with open("input.txt", "r") as f:
+        inp = process_input(f.read())
+
+    print(f"Part 1: {part1(inp)}")
+    print(f"Part 2: {part2(inp)}")''')
