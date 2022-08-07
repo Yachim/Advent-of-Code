@@ -64,8 +64,7 @@ class TestPart2(unittest.TestCase):
         self.assertEqual(part2(), None)""")
 
         with open(f"src/{year}/{day}/{day}.py", "w") as f:
-            f.write('''
-def process_input(raw_in):
+            f.write('''def process_input(raw_in):
     pass
 
 def part1(inp):
