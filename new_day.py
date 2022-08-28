@@ -26,7 +26,11 @@ def create_folder(path: str):
 
 def create_files(path: str, day: str, name_pref=""):
     f = open(f"{path}/{name_pref}{day}.py", "x")
-    f = open(f"{path}/{name_pref}input.txt", "x")
+    f.close()
+    # no test_input
+    if name_pref == "":
+        f = open(f"{path}/input.txt", "x")
+        f.close()
     f = open(f"{path}/__init__.py", "x")
     f.close()
 
